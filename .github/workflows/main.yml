@@ -112,6 +112,4 @@ jobs:
           chart-path: ./helm/vprofilecharts
           namespace: default
           name: vprofileapp-release
-          values: |
-            appimage=${{ secrets.REGISTRY }}/${{ env.ECR_REPOSITORY }}
-            apptag=${{ github.run_number }}
+          values: appimage=${{ secrets.REGISTRY }}/${{ env.ECR_REPOSITORY }},apptag=${{ github.run_number }}
